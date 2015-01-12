@@ -1,0 +1,7 @@
+/* CURRENTLY IN: styles/main.css */
+iframe {
+ 	-webkit-transform:scale(0.2);
+ 	-moz-transform-scale(0.2);
+ 	width:1024px;
+ 	height:768px; 
+}
