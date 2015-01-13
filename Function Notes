@@ -34,3 +34,18 @@ Version 2
 		}
 
 	returnObject();
+	
+	
+	
+	
+
+	if ( hasImage === true ) {
+	    generate iframe with image
+	}
+	else {
+		generate iframe with website link
+	}
+	
+	
+	
+	
