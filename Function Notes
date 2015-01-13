@@ -1,0 +1,36 @@
+Version 1	
+
+
+	function returnObject() {
+			$.ajax({
+				url:"http://fewd.us/lizkalina/api/GET/tag"
+				, data: {
+					tag: 'project'
+				}
+				, method: 'POST'
+			}).then(function(data){
+				objectTest = JSON.parse(data);
+				console.log(objectTest);
+				return objectTest;
+			});
+			return objectTest;
+		}
+
+	returnObject();
+
+Version 2
+
+	function returnObject() {
+			$.ajax({
+				url:"http://fewd.us/lizkalina/api/GET/tag"
+				, data: {
+					tag: 'project'
+				}
+				, method: 'POST'
+			}).then(function(data){
+				var objectTest = JSON.parse(data);
+				return objectTest;
+			});
+		}
+
+	returnObject();

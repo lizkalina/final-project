@@ -44,4 +44,6 @@ loopThroughPocketObjects();
 // 	}
 // }// generate iframe for loop
 
-
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
