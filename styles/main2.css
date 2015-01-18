@@ -29,10 +29,6 @@ iframe {
 	display: block;
 }
 
-.glbl--fl {
-	float: left;
-	box-sizing: border-box;
-}
 
 .glbl--fr {
 	float: right;
@@ -66,10 +62,10 @@ iframe {
 
 .tags__bar {
 	position: fixed;
+	margin-top: 300px;
 	background-color: #06fabd;
 	width: 100%;
 	height: 170px;
-	padding: 1rem;
 }
 
 
@@ -79,13 +75,24 @@ iframe {
 	height: 50px;
 }
 
-.rowitem {
+.rowitem { 
 	width: 25%;
 	min-height: 150px;
 	box-sizing: border-box;
 	border: 2px solid black;
-}
+} 
 
 .rowitem img {
 	width: 100%;
+}
+
+.yellow-bg{
+	background-color: yellow;
+}
+.blue-bg{
+	background-color: blue;
+}
+
+.green-bg{
+	background-color: green;
 }

@@ -12,12 +12,17 @@
 </head>
 <body>
 
-<div class="tags__bar"></footer>
-
-
-<div class="column__wrapper glbl--fl js-content">
+<div class="tags__bar">
   <div class="filterbutton" data-tag=".comedy">COMEDY</div>
-  <div class="filterbutton" data-tag="*">EVERYTHING</div>
+  <div class="filterbutton" data-tag=".article">ARTICLES</div>
+  <div class="filterbutton" data-tag=".article">ARTICLES</div>
+  <div class="filterbutton" data-tag="*">RESET</div>
+
+</div>
+
+
+<div class="column__wrapper glbl--fr js-content">
+  
   <div class="data-container"></div>
 </div>
  
@@ -28,7 +33,7 @@
 <!-- IFRAME TEMPLATE -->
 
     <script type="foo/bar" class="iframe--template">
-      <div class="rowitem <%= tagClass %>">
+      <div class="rowitem <%= tagClass %> <%= randomColor %> <%= page %>" page1>
           <%= given_title %>
           <% if ( has_image ) { %>
             <img src="<%= image_src %>">

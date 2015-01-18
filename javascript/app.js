@@ -22,18 +22,46 @@
 		});
 	} // getPocketObject
 
+	function randomColor(){
+		var colors = ['yellow', 'blue', 'green']
+			, random = Math.floor(Math.random() * colors.length);
+		
+		// console.log(colors[random]);
+		return colors[random] + '-bg';
+	}
+
 	getPocketObject( 'gettags', { tag: '' }).then(function(data){
 		data = JSON.parse(data);
 
 		var templateHTML = $('.iframe--template').html();
 		var tmp = _.template( templateHTML )
 				, grid = $('.data-container');
+		var totalItems = 0;
+		
+		for (var i in data){
+			totalItems++
+		}
+
+		var interval = 10;
+		var amtOfPages = totalItems/interval;
+		var start 	= 1;		
+		var page = 1;
+
+		for ( var i = page; i <= amtOfPages; i++){
+			// for (var x = ){
+				obj.page = page;
+
+				start += interval;
+				interval += interval;
+				page++;
+		}
 
 		for ( var item in data.list ) {
 			var curr = data.list[ item ]
 				, obj = {};
 
 			obj.given_title = curr.given_title;
+			obj.randomColor = randomColor();
 
 			if ( curr.has_image === "1" ) {
 				obj.has_image =  1;
