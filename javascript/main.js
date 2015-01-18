@@ -2,37 +2,90 @@
 
 function returnPocketObject() {
 			$.ajax({
-				url:"http://fewd.us/lizkalina/api/GET/tag"
+				url:"http://fewd.us/lizkalina/api/GET/tag/"
 				, data: {
 				}
 				, method: 'POST'
 			}).then(function(data){
 				pocketObject = JSON.parse(data);
-				console.log(pocketObject);
-				return pocketObject;
+				// console.log(pocketObject);
+	
+
+
+		var itemObjectsArray = [];
+
+		function getItemObjects() {
+			for ( var item in pocketObject.list ) {
+					var itemObjects = pocketObject.list[item];
+					itemObjectsArray.push(itemObjects);
+				}
+		}
+		
+		getItemObjects();
+
+		console.log(itemObjectsArray); // array with all Pocket objects!
+
+
+
+
+		var iframeSrc = $([]);
+
+		function getIframeSrc() {
+			for ( var position in itemObjectsArray ) {
+				
+				var selectedItem = itemObjectsArray[position];
+				if (selectedItem.has_image == 1 ) {
+					var itemPhoto = selectedItem.image.src;
+					// console.log(itemPhoto);
+					iframeSrc.push(itemPhoto); 
+				}
+
+				else {
+					var itemGivenURL = selectedItem.given_url;
+					// console.log(itemGivenURL);
+					iframeSrc.push(itemGivenURL);
+					}
+				}
+			}
+
+		getIframeSrc();
+
+		console.log (iframeSrc);
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
 			});
-			return pocketObject;
 		}
 
 returnPocketObject();
 
-console.log(pocketObject);
 
 
 
-function loopThroughPocketObjects() {
-	var itemNumArray = Object.keys(pocketObject.list)
-	,	itemGivenURL = [];
-	for ( var i = 0; i < itemNumArray.length; i++ ) {
-		console.log(itemNumArray[0]); //prints each itemID
-		var itemID = itemNumArray[i];
-		console.log(pocketObject.list[itemID]);
-		itemGivenURL.push(pocketObject.list[itemID].given_url);
-	};
-	return itemGivenURL;
-}
+// function loopThroughPocketObjects() {
+// 	var itemNumArray = Object.keys(pocketObject.list)
+// 	,	itemGivenURL = [];
+// 	for ( var i = 0; i < itemNumArray.length; i++ ) {
+// 		console.log(itemNumArray[0]); //prints each itemID
+// 		var itemID = itemNumArray[i];
+// 		console.log(pocketObject.list[itemID]);
+// 		itemGivenURL.push(pocketObject.list[itemID].given_url);
+// 	};
+// 	return itemGivenURL;
+// }
 
-loopThroughPocketObjects();
+// loopThroughPocketObjects();
 
 
 // function addIframe () {
@@ -44,6 +97,4 @@ loopThroughPocketObjects();
 // 	}
 // }// generate iframe for loop
 
-$(document).ready(function(){
-  $('.bxslider').bxSlider();
-});
+

@@ -1,20 +1,76 @@
 /* CURRENTLY IN: styles/main.css */
 html {
 	overflow-y: scroll;
-overflow-x: hidden;
+	overflow-x: hidden;
+	font-size: 10px;
+}
+
+body {
+	background-color: #f6f6f6;
+	margin-right: 2.5rem;
 }
 
 iframe {
  	-webkit-transform:scale(0.7);
  	-moz-transform-scale(0.7);
  	margin:0px;
- /*	width:1024px;
+/* 	width:1024px;
  	height:768px;*/
 }
 
 .overall {
 	background-color: #4FD3F7;
 }
+
+.clearfix {
+	display: block;
+}
+
+.glbl--fl {
+	float: left;
+	box-sizing: border-box;
+}
+
+.glbl--fr {
+	float: right;
+	box-sizing: border-box;
+}
+
+
+.column__wrapper {
+	width: 75%;
+}
+
+.header-2 {
+	margin-left: 25%;
+	width: 50%;
+	background-color: #ffffff;
+	height: 10%;
+	
+}
+
+.header__headline {
+	vertical-align: bottom;
+	margin-left: 8px;
+	font-size: 2.5rem;
+}
+
+.header__nav {
+	vertical-align: baseline;
+	font-size: 1.5rem;
+}
+
+.central-bar {
+	background-position: fixed;
+	background-color: #06fabd;
+	width: 25%;
+	height: 190px;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+
+
 
 .grid--system {
 	padding: none;
