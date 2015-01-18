@@ -29,6 +29,29 @@ function returnPocketObject() {
 		console.log(itemObjectsArray); // array with all Pocket objects!
 
 
+		
+		// var itemTagsArray = [];
+
+		// function getItemTags() {
+		// 	for ( var position in pocketObject.list ) {
+		// 		var selectedTag = itemObjectsArray[position].tags.project.tag;
+		// 		if ( selectedTag != undefined ){
+		// 			itemTagsArray.push(selectedTag);	
+		// 		}
+		// 		else {return;}
+					
+		// 	}
+		// }
+		
+		// getItemTags();
+
+		// console.log(itemTagsArray); // array with all Pocket objects!
+
+
+
+
+
+
 
 
 		var iframeSrc = $([]);
@@ -56,16 +79,16 @@ function returnPocketObject() {
 		console.log (iframeSrc);
 
 
-	function addIframeElement () {
-		
+// 	function addNewIframes () {
+// 		console.log( $( '.iframe--template' ).html() );
+// 		var google = "http://www.nytimes.com/" ;
+// 		var iframeTemplate = _.template( $( '.iframe--template' ).html() );
+// 		var newIframe = iframeTemplate({testHref: google});
 
+// 		$('.first--column').prepend(newIframe);
+// 	}	
 
-
-	}	
-
-	addIframeElement();
-
-
+// addNewIframes();
 
 
 			});
@@ -74,6 +97,17 @@ function returnPocketObject() {
 returnPocketObject();
 
 })();
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function loopThroughPocketObjects() {
@@ -99,5 +133,3 @@ returnPocketObject();
 //   	newIframe.appendChild(newContent);
 // 	}
 // }// generate iframe for loop
-
-
