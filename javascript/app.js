@@ -36,25 +36,25 @@
 		var templateHTML = $('.iframe--template').html();
 		var tmp = _.template( templateHTML )
 				, grid = $('.data-container');
-		var totalItems = 0;
+		// var totalItems = 0;
 		
-		for (var i in data){
-			totalItems++
-		}
+		// for (var i in data){
+		// 	totalItems++
+		// }
 
-		var interval = 10;
-		var amtOfPages = totalItems/interval;
-		var start 	= 1;		
-		var page = 1;
+		// var interval = 10;
+		// var amtOfPages = totalItems/interval;
+		// var start 	= 1;		
+		// var page = 1;
 
-		for ( var i = page; i <= amtOfPages; i++){
-			// for (var x = ){
-				obj.page = page;
+		// for ( var i = page; i <= amtOfPages; i++){
+		// 	// for (var x = ){
+		// 		obj.page = page;
 
-				start += interval;
-				interval += interval;
-				page++;
-		}
+		// 		start += interval;
+		// 		interval += interval;
+		// 		page++;
+		// }
 
 		for ( var item in data.list ) {
 			var curr = data.list[ item ]

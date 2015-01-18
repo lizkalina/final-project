@@ -79,6 +79,7 @@ iframe {
 	width: 25%;
 	min-height: 150px;
 	box-sizing: border-box;
+	padding: 20px;
 	border: 2px solid black;
 } 
 
@@ -87,12 +88,12 @@ iframe {
 }
 
 .yellow-bg{
-	background-color: yellow;
+	background-color: #d95c5c;
 }
 .blue-bg{
-	background-color: blue;
+	background-color: #564f8a;
 }
 
 .green-bg{
-	background-color: green;
+	background-color: #e07b53;
 }
