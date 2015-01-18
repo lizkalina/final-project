@@ -1,8 +1,7 @@
 /* CURRENTLY IN: styles/main.css */
 html {
-	overflow-y: scroll;
-	overflow-x: hidden;
 	font-size: 10px;
+
 }
 
 body {
@@ -11,13 +10,14 @@ body {
 }
 
 iframe {
- 	-webkit-transform:scale(0.7);
- 	-moz-transform-scale(0.7);
- 	margin:0px;
+ 	-webkit-transform:scale(0.9);
+ 	-moz-transform-scale(0.9);
  	display: block;
  	width: 100%;
- 	overflow: hidden;
-/* 	width:1024px;
+ 	margin:0px auto;
+ 	overflow-y: scroll;
+	overflow-x: hidden;
+	/*width:1024px;
  	height:768px;*/
 }
 
@@ -44,6 +44,10 @@ iframe {
 	width: 75%;
 }
 
+.ui.segment {
+	padding: 0px;
+}
+
 .header-2 {
 	margin-left: 25%;
 	width: 50%;
@@ -63,11 +67,11 @@ iframe {
 	font-size: 1.5rem;
 }
 
-.central-bar {
+.central-bar--left {
 	background-position: fixed;
 	background-color: #06fabd;
 	width: 25%;
-	height: 190px;
+	height: 170px;
 	box-sizing: border-box;
 	padding: 1rem;
 }
