@@ -81,9 +81,9 @@ function returnPocketObject() {
 
 // 	function addNewIframes () {
 // 		console.log( $( '.iframe--template' ).html() );
-// 		var google = "http://www.nytimes.com/" ;
+// 		var nytimes = "http://www.nytimes.com/" ;
 // 		var iframeTemplate = _.template( $( '.iframe--template' ).html() );
-// 		var newIframe = iframeTemplate({testHref: google});
+// 		var newIframe = iframeTemplate({testHref: nytimes});
 
 // 		$('.first--column').prepend(newIframe);
 // 	}	

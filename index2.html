@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title >FEWD-ME</title>
+        
+    <link href="http://reset5.googlecode.com/hg/reset.min.css" rel="stylesheet">
+        <link href="styles/jquery.bxslider.css" rel="stylesheet">
+    <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+    <link rel='stylesheet' href='styles/main2.css'>
+</head>
+<body>
+
+<div class="tags__bar"></footer>
+
+
+<div class="column__wrapper glbl--fl js-content">
+  <div class="filterbutton" data-tag=".comedy">COMEDY</div>
+  <div class="filterbutton" data-tag="*">EVERYTHING</div>
+  <div class="data-container"></div>
+</div>
+ 
+
+
+
+
+<!-- IFRAME TEMPLATE -->
+
+    <script type="foo/bar" class="iframe--template">
+      <div class="rowitem <%= tagClass %>">
+          <%= given_title %>
+          <% if ( has_image ) { %>
+            <img src="<%= image_src %>">
+          <% } else { %>
+            <span>HELLO</span>
+          <% } %>
+          <p><%= excerpt %></p>
+      <div>
+    </script>
+  
+
+<!-- IFRAME TEMPLATE END -->
+
+
+
+
+
+
+
+
+<!-- <footer class="footer"></footer>
+ -->
+
+
+
+
+
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+    <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+    <script src='javascript/semantic.min.js'></script>
+     <script src="javascript/jquery.bxslider.min.js"></script>
+     <script src="javascript/underscore.min.js"></script>
+    <script src="http://isotope.metafizzy.co/isotope.pkgd.min.js"></script>
+    <script src='javascript/app.js'></script>
+</body>
+</html>
