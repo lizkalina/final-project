@@ -1,5 +1,8 @@
 /* CURRENTLY IN: javascript/main.js */
 
+(function(){ // protect the lemmings! 
+
+
 function returnPocketObject() {
 			$.ajax({
 				url:"http://fewd.us/lizkalina/api/GET/tag/"
@@ -53,14 +56,14 @@ function returnPocketObject() {
 		console.log (iframeSrc);
 
 
+	function addIframeElement () {
 		
 
 
 
+	}	
 
-
-
-
+	addIframeElement();
 
 
 
@@ -70,7 +73,7 @@ function returnPocketObject() {
 
 returnPocketObject();
 
-
+})();
 
 
 // function loopThroughPocketObjects() {

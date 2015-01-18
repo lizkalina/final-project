@@ -45,7 +45,52 @@ Version 2
 	else {
 		generate iframe with website link
 	}
-	
+
+
+
+
+function returnPocketObject() {
+			$.ajax({
+				url:"http://fewd.us/lizkalina/api/GET/tag/"
+				, data: {
+				}
+				, method: 'POST'
+			}).then(function(data){
+				pocketObject = JSON.parse(data);
+				// console.log(pocketObject);
+				for ( var item in pocketObject.list ) {
+					console.log( item, pocketObject.list[item]);
+				}
+
+			});
+		}
+
+returnPocketObject();
+
+
+
+
+	var iframeSrc = $([]);
+
+		function getiframeSrc () {}
+			for ( var position in itemObjectsArray ) {
+				
+				var selectedItem = itemObjectsArray[position];
+				if (selectedItem.has_image == 1 ) {
+					var itemPhoto = selectedItem.image.src;
+					// console.log(itemPhoto);
+					iframeSrc.push(itemPhoto); 
+				}
+
+				else {
+					var itemGivenURL = selectedItem.given_url;
+					// console.log(itemGivenURL);
+					iframeSrc.push(itemGivenURL);
+				}
+			}
+
+			console.log (iframeSrc);
+
 	
 	
 	
