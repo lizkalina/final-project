@@ -25,7 +25,7 @@
 
 
 	function randomColor(){
-		var colors = ['yellow', 'blue', 'green']
+		var colors = ['yellow', 'blue', 'green','purple']
 			, random = Math.floor(Math.random() * colors.length);
 		
 		// console.log(colors[random]);
@@ -85,7 +85,7 @@
 			allTags.push( 'pg-'+pagination );
 			i++;
 			obj.tagClass = allTags.join(' ');
-			grid.append( tmp( obj ) );
+			grid.prepend( tmp( obj ) );
 
 		} // for each item in list
 

@@ -34,18 +34,22 @@
 
     <script type="foo/bar" class="iframe--template">
       <div class="rowitem <%= tagClass %> <%= randomColor %>">
-          <%= given_title %>
           <% if ( has_image ) { %>
             <img src="<%= image_src %>">
           <% } else { %>
             <span></span>
           <% } %>
-          <p class="rowitem__details"><%= excerpt %></p>
+          <p class="rowitem__author">ADDED by LIZ</p>
+          <p class="rowitem__title"><%= given_title %></p>
+          <p class="rowitem__details--hidden"><%= excerpt %></p>
       <div>
     </script>
   
 
 <!-- IFRAME TEMPLATE END -->
+
+
+
 
 
 
