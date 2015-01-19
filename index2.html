@@ -11,6 +11,10 @@
     <link rel='stylesheet' href='styles/main2.css'>
 </head>
 <body>
+
+
+
+
 <header class="header__headline">HEADLINE</header>
 
 <div class="tags__bar">
@@ -19,6 +23,8 @@
   <div class="filterbutton" data-tag=".article">READING</div>
   <div class="filterbutton filterbutton--reset" data-tag="*">reset</div>
 </div>
+
+
 
 
 <div class="column__wrapper glbl--fr js-content">
@@ -32,23 +38,37 @@
 
 <!-- IFRAME TEMPLATE -->
 
-    <script type="foo/bar" class="iframe--template">
-      <div class="rowitem <%= tagClass %> <%= randomColor %>">
-          <% if ( has_image ) { %>
-            <img src="<%= image_src %>">
-          <% } else { %>
-            <span></span>
-          <% } %>
-          <p class="rowitem__author">ADDED by LIZ</p>
-          <p class="rowitem__title"><%= given_title %></p>
-          <p class="rowitem__details--hidden"><%= excerpt %></p>
-      <div>
-    </script>
+  
   
 
 <!-- IFRAME TEMPLATE END -->
 
-
+<script type="foo/bar" class="iframe--template">
+<div class="rowitem <%= tagClass %>">
+<div style="width:100%" class="ui card">
+  <div class="ui slide masked reveal image">
+    <% if ( has_image ) { %>
+            <img class="visible content"src="<%= image_src %>">
+          <% } else { %>
+            <span></span>
+          <% } %>
+    <p class="hidden content"><%= excerpt %></p>
+  </div>
+  <div class="content">
+    <a class="header"><%= given_title %></a>
+    <div class="meta">
+      <span class="date">Create in Sep 2014</span>
+    </div>
+  </div>
+  <div class="extra content">
+    <a>
+      <i class="users icon"></i>
+      Added by Liz
+    </a>
+  </div>
+</div>
+</div>
+  </script>
 
 
 

@@ -3,6 +3,10 @@
 (function(){ // protect the lemmings! 
 
 
+$("img").dimmer({
+  on: 'hover'
+});
+
 function returnPocketObject() {
 			$.ajax({
 				url:"http://fewd.us/lizkalina/api/GET/tag/"
