@@ -22,6 +22,8 @@
 		});
 	} // getPocketObject
 
+
+
 	function randomColor(){
 		var colors = ['yellow', 'blue', 'green']
 			, random = Math.floor(Math.random() * colors.length);
@@ -32,7 +34,7 @@
 
 	getPocketObject( 'gettags', { tag: '' }).then(function(data){
 		data = JSON.parse(data);
-
+		console.log(data);
 		var templateHTML = $('.iframe--template').html();
 		var tmp = _.template( templateHTML )
 				, grid = $('.data-container');
@@ -55,8 +57,9 @@
 		// 		interval += interval;
 		// 		page++;
 		// }
-
+		var i = 0;
 		for ( var item in data.list ) {
+
 			var curr = data.list[ item ]
 				, obj = {};
 
@@ -78,6 +81,9 @@
 				var currentTag = curr.tags[ tags ];
 				allTags.push( currentTag.tag );
 			}
+			var pagination = Math.floor( i/ 10 )+1;
+			allTags.push( 'pg-'+pagination );
+			i++;
 			obj.tagClass = allTags.join(' ');
 			grid.append( tmp( obj ) );
 
@@ -90,6 +96,16 @@
 		  itemSelector: '.rowitem',
 		  layoutMode: 'masonry'
 		});
+
+		console.log( pagination, i );
+		for ( var j = 1; j <= pagination; j++ ) {
+			var div = $('<div/>');
+			div.addClass('filterbutton');
+			div.attr('data-tag', '.pg-'+j);
+			div.text( 'PAGE '+j );
+			$('.tags__bar').append(div);
+		}
+
 
 		$('.filterbutton').on('click', function( e ) {
 			e.preventDefault();
