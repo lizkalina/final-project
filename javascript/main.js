@@ -3,9 +3,7 @@
 (function(){ // protect the lemmings! 
 
 
-$("img").dimmer({
-  on: 'hover'
-});
+
 
 function returnPocketObject() {
 			$.ajax({

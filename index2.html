@@ -46,24 +46,23 @@
 <script type="foo/bar" class="iframe--template">
 <div class="rowitem <%= tagClass %>">
 <div style="width:100%" class="ui card">
-  <div class="ui slide masked reveal image">
+  <div class="ui">
     <% if ( has_image ) { %>
-            <img class="visible content"src="<%= image_src %>">
+            <img src="<%= image_src %>">
           <% } else { %>
             <span></span>
           <% } %>
-    <p class="hidden content"><%= excerpt %></p>
   </div>
-  <div class="content">
-    <a class="header"><%= given_title %></a>
+  <div class="content center">
+    <a href=<%= given_url %> class="header"><%= given_title %></a>
     <div class="meta">
-      <span class="date">Create in Sep 2014</span>
+      <span class="date">Create in </span>
     </div>
   </div>
   <div class="extra content">
     <a>
       <i class="users icon"></i>
-      Added by Liz
+      Added by Liz on <%= time_added %>
     </a>
   </div>
 </div>

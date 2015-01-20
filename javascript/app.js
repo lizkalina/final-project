@@ -64,7 +64,13 @@
 				, obj = {};
 
 			obj.given_title = curr.given_title;
+			obj.given_url = curr.given_url;
 			obj.randomColor = randomColor();
+			
+			
+			var timeAdded = new Date(curr.time_added * 1000);
+			obj.time_added = (timeAdded.toLocaleDateString());
+			
 
 			if ( curr.has_image === "1" ) {
 				obj.has_image =  1;
