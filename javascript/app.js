@@ -1,6 +1,8 @@
 (function(){
 
 
+
+
 	var __MARQUEEAPI__ = "http://fewd.us/lizkalina/api/"
 		, __GET__ = "GET/"
 		, __TAG__ = "tag/";
@@ -78,13 +80,7 @@
 		}
 
 		obj.parsedURL = parseURL(obj.given_url);
-
-
-obj.hostname_url = obj.parsedURL.hostname;
-
-
-
-
+		obj.hostname_url = obj.parsedURL.hostname;
 
 
 
@@ -113,6 +109,14 @@ obj.hostname_url = obj.parsedURL.hostname;
 				
 			} // otherwise update appr
 
+
+
+			if ( curr.excerpt === "" ) {
+				obj.has_details =  0;
+			} // if image exists
+			else {
+				obj.has_details = 1;
+			} // otherwise update appr
 
 
 
@@ -145,9 +149,9 @@ obj.hostname_url = obj.parsedURL.hostname;
 		for ( var j = 1; j <= pagination; j++ ) {
 			var div = $('<div/>');
 			div.addClass('filterbutton');
-			div.attr('data-tag', '.pg-'+j);
-			div.text( 'PAGE '+j );
-			$('.tags__bar').append(div);
+			// div.attr('data-tag', '.pg-'+j);
+			// div.text( 'PAGE '+j );
+			// $('.tags__bar').append(div);
 		}
 
 		

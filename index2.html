@@ -13,14 +13,24 @@
 
 
 
-<header class="header__headline">HEADLINE</header>
+<header class="header__headline"><img style="width:100%;"></header>
 
 <div class="tags__bar">
   <div class="filterbutton" data-tag=".comedy">COMEDY</div>
+  <div class="filterbutton" data-tag=".dogs">DOGS</div>
   <div class="filterbutton" data-tag=".film">FILM</div>
   <div class="filterbutton" data-tag=".article">READING</div>
-  <div class="filterbutton filterbutton--reset" data-tag="*">reset</div>
+   <div class="filterbutton" data-tag=".tv">TV</div>
+  <div class="filterbutton filterbutton--reset" data-tag="*">X</div>
+<div class = "image__grid">
+<img class="ui medium image glbl--fl" src="http://semantic-ui.com/images/wireframe/image.png">
+<img class="ui medium image glbl--fr" src="http://semantic-ui.com/images/wireframe/image.png">
+<img class="ui medium image glbl--fl" src="http://semantic-ui.com/images/wireframe/image.png">
+<img class="ui medium image glbl--fr" src="http://semantic-ui.com/images/wireframe/image.png">
 </div>
+</div>
+
+
 
 
 
@@ -30,7 +40,7 @@
   <div class="data-container"></div>
 </div>
  
-
+<footer></footer>
 
 
 
@@ -45,22 +55,45 @@
 <div class="rowitem <%= tagClass %>">
 <div style="width:100%" class="ui card">
   <div class="ui">
+  
     <% if ( has_image ) { %>
             <img src="<%= image_src %>">
           <% } else { %>
             <span></span>
           <% } %>
   </div>
+ 
+
+
   <div class="content">
-    <a target="_blank" href=<%= given_url %> class="header"><%= best_title %></a>
-    <div class="meta glbl--fr"><%= hostname_url %></div>
+    <a target="_blank" href=<%= given_url %> class="header header__modules"><%= best_title %></a>
   </div>
 
-  <div class="extra content">
-    <a>
+
+   <% if ( has_details ) { %>
+           <div class="ui extra">
+
+
+            <div class="active content">
+    <p><%= excerpt %></p>
+  </div>
+ 
+   </div>
+          <% } else { %>
+         <span style="height:0px;"></span>
+          <% } %>
+ 
+  
+
+<div class="content extra">
+   <a>
       <i class="users icon"></i>
       Added by Liz on <%= time_added %>
-    </a>
+    </a><div class="meta glbl--fr"><%= hostname_url %></div>
+</div>
+
+
+
   </div>
 </div>
 </div>
@@ -75,6 +108,7 @@
      <script src="javascript/underscore.min.js"></script>
     <script src="http://isotope.metafizzy.co/isotope.pkgd.min.js"></script>
     <script src='javascript/semantic.min.js'></script>
+    <script src="javascript/accordion.min.js"></script> 
     <script src='javascript/app.js'></script>
 </body>
 </html>
