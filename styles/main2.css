@@ -88,6 +88,9 @@ body {
 
 }
 
+.details--active {
+	display: block;
+}
 
 .rowitem__details--active {
 	font-size: 1.3rem;
@@ -129,5 +132,19 @@ body {
 
 
 .pg-1 {
+}
 
+.pg-2 {
+}
+
+
+.pg-3 {
+}
+
+.page--active {
+	display: block;	
+}
+
+.page--hidden {
+	display: inline;
 }

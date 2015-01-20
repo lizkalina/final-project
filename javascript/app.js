@@ -1,5 +1,6 @@
 (function(){
 
+
 	var __MARQUEEAPI__ = "http://fewd.us/lizkalina/api/"
 		, __GET__ = "GET/"
 		, __TAG__ = "tag/";
@@ -38,25 +39,8 @@
 		var templateHTML = $('.iframe--template').html();
 		var tmp = _.template( templateHTML )
 				, grid = $('.data-container');
-		// var totalItems = 0;
-		
-		// for (var i in data){
-		// 	totalItems++
-		// }
 
-		// var interval = 10;
-		// var amtOfPages = totalItems/interval;
-		// var start 	= 1;		
-		// var page = 1;
 
-		// for ( var i = page; i <= amtOfPages; i++){
-		// 	// for (var x = ){
-		// 		obj.page = page;
-
-		// 		start += interval;
-		// 		interval += interval;
-		// 		page++;
-		// }
 		var i = 0;
 		for ( var item in data.list ) {
 
@@ -65,8 +49,45 @@
 
 			obj.given_title = curr.given_title;
 			obj.given_url = curr.given_url;
+			obj.resolved_title = curr.resolved_title;
 			obj.randomColor = randomColor();
 			
+			
+		function parseURL(url) {
+   			 var parser = document.createElement('a'),
+    		    searchObject = {},
+    		    queries, split, i;
+    		// Let the browser do the work
+    		parser.href = url;
+    		// Convert query string to object
+    		queries = parser.search.replace(/^\?/, '').split('&');
+    		for( i = 0; i < queries.length; i++ ) {
+    		    split = queries[i].split('=');
+    		    searchObject[split[0]] = split[1];
+    		}
+    		return {
+    		    protocol: parser.protocol,
+    		    host: parser.host,
+    		    hostname: parser.hostname,
+    		    port: parser.port,
+    		    pathname: parser.pathname,
+    		    search: parser.search,
+    		    searchObject: searchObject,
+    		    hash: parser.hash
+    		};
+		}
+
+		obj.parsedURL = parseURL(obj.given_url);
+
+
+obj.hostname_url = obj.parsedURL.hostname;
+
+
+
+
+
+
+
 			
 			var timeAdded = new Date(curr.time_added * 1000);
 			obj.time_added = (timeAdded.toLocaleDateString());
@@ -80,6 +101,23 @@
 				obj.image_src = "";
 				obj.has_image = 0;
 			} // otherwise update appr
+
+
+			if ( curr.resolved_title === "" ) {
+				obj.has_extra_title =  0;
+				obj.best_title = curr.given_title;
+			} // if image exists
+			else {
+				obj.has_extra_title = 1;
+				obj.best_title = obj.resolved_title;
+				
+			} // otherwise update appr
+
+
+
+
+
+
 
 			obj.excerpt = curr.excerpt;
 			var allTags = [];
@@ -111,6 +149,9 @@
 			div.text( 'PAGE '+j );
 			$('.tags__bar').append(div);
 		}
+
+		
+		
 
 
 		$('.filterbutton').on('click', function( e ) {
