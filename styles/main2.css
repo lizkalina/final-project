@@ -32,10 +32,10 @@ body {
   position: fixed;
   	margin-left: 25%;
 	width: 49.5%;
-  height: 18%;
+  height: 20%;
   background: #ffffff;
  min-height: 150px;
- transition: all 3s ease;
+ transition: all 0.7s ease;
 }
 
 
@@ -65,7 +65,7 @@ header.sticky {
 
 
 .column__wrapper {
-	margin-top: 11%;
+	margin-top: 10.5%;
 	width: 75%;
 	margin-bottom: 500px;
 }
@@ -80,6 +80,7 @@ header.sticky {
 	height: 30%;
 	min-height: 300px;
 	transition: all 0.4s ease;
+	box-shadow: .3em 0 0 0 #d4d4d5,0 0 0 1px #d4d4d5;
 }
 
 .tags__bar.sticky {
@@ -111,7 +112,8 @@ header.sticky {
 .image__grid {
 	width:25%;
 	display: inline-block;
-	margin-top: 0%;
+	margin-left: 0.5%;
+	margin-top: 0.5%;
 }
 
 .rowitem { 
