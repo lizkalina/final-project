@@ -1,6 +1,45 @@
 (function(){
 
 
+$('.special.cards .image').dimmer({
+  on: 'hover'
+});
+
+
+function addStickyClass(location) {$(window).on('scroll', function() {
+	if ($(this).scrollTop() > 1){  
+    $(location).addClass("sticky");
+  	}
+  	else{
+    $(location).removeClass("sticky");
+  	}
+	}); 
+}
+
+addStickyClass(".tags__bar");
+addStickyClass("header");
+
+
+
+
+$(window).on("scroll", function() {
+	var scrollHeight = $(document).height();
+	var scrollPosition = $(window).height() + $(window).scrollTop();
+	if ((scrollHeight - scrollPosition) / scrollHeight <= 0.02) {
+	$('.jump--up').removeClass("hidden");
+  }
+  else {
+    $('.jump--up').addClass("hidden");
+  }
+});
+
+
+$('.jump--up').on('click',function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+ });
+
+
 
 
 	var __MARQUEEAPI__ = "http://fewd.us/lizkalina/api/"
