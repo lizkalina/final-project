@@ -1,6 +1,8 @@
 /* CURRENTLY IN: styles/main.css */
 html {
 	font-size: 10px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
 
 }
 
@@ -11,6 +13,159 @@ body {
 	box-sizing: border-box;
 }
 
+.clearfix {
+	display: block;
+}
+
+
+.glbl--fr {
+	float: right;
+}
+
+.glbl--fl {
+	float: left;
+	
+}
+
+
+
+
+
+.header__headline {
+  position: fixed;
+  	margin-left: 25%;
+	width: 48%;
+  height: 20%;
+  background: #ffffff;
+ min-height: 150px;
+ transition: all 0.7s ease;
+}
+
+
+.header__headline.sticky {
+  display: block;
+  height: 15%;
+  background: #ffffff;
+  width: 25%;
+  margin-left: 0%;
+  transition: all 0.5s ease;
+}
+
+
+
+
+
+.column__wrapper {
+	margin-top: 10.5%;
+	width: 75%;
+	margin-bottom: 200px;
+}
+
+
+
+.tags__bar {
+	vertical-align: text-bottom;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	position: fixed;
+	background-color: #06fabd;
+	margin-top: 10%;
+	width: 100%;
+	height: 25%;
+	min-height: 300px;
+	transition: all 0.4s ease;
+	box-shadow: .3em 0 0 0 #d4d4d5,0 0 0 1px #d4d4d5;
+}
+
+.tags__bar.sticky {
+	position: fixed;
+	background-color: #06fabd;
+	margin-top: 5%;
+	width: 100%;
+	height: 10%;
+	min-height: 150px;
+	transition: all 0.4s ease;
+}
+
+
+
+
+.filterbutton {
+	font-weight: 300;
+	font-size: 2.5rem;
+	letter-spacing: 10px;
+	padding-left: 1.2%;
+	padding-top: 10px;
+	height: 16.67%;
+	width: 25%;
+}
+
+.filterbutton:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.filterbutton.sticky {
+	font-size: 1.5rem;
+	letter-spacing: 5px;
+	padding-top: 3px;
+}
+
+
+.image__grid {
+	width:24%;
+	display: inline-block;
+	margin-left: 0.5%;
+	margin-top: 0.5%;
+	opacity: .8;
+	font-weight: 300;
+	font-size: 2rem;
+	word-spacing: 0px;
+}
+
+
+.data-container {
+	margin-bottom: 100px;
+}
+
+.rowitem { 
+	margin: .5% .6%;
+	width: 32.1%;
+	min-height: 150px;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+
+} 
+
+.rowitem__author {
+	padding: 0rem 1.2rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.rowitem__header {
+	font-size: 2.3rem;
+	color: black;	
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.rowitem__excerpt {
+	font-size: 1.2rem;
+	margin: 0px 8px;
+	text-align: justify;
+    text-justify: inter-word;
+    font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+
+
+.rowitem img {
+	width: 100%;
+	padding: 12px 12px 0px 12px;
+	margin: 0px;
+}
 
 
 .jump--up.hidden {
@@ -28,130 +183,6 @@ body {
 }
 
 
-.header__headline {
-  position: fixed;
-  	margin-left: 25%;
-	width: 49.5%;
-  height: 20%;
-  background: #ffffff;
- min-height: 150px;
- transition: all 0.7s ease;
-}
-
-
-header.sticky {
-  display: block;
-  height: 15%;
-  background: #ffffff;
-  width: 25%;
-  margin-left: 0%;
-  transition: all 0.5s ease;
-}
-
-
-.clearfix {
-	display: block;
-}
-
-
-.glbl--fr {
-	float: right;
-}
-
-.glbl--fl {
-	float: left;
-	
-}
-
-
-.column__wrapper {
-	margin-top: 10.5%;
-	width: 75%;
-	margin-bottom: 500px;
-}
-
-
-
-.tags__bar {
-	position: fixed;
-	background-color: #06fabd;
-	margin-top: 10%;
-	width: 100%;
-	height: 30%;
-	min-height: 300px;
-	transition: all 0.4s ease;
-	box-shadow: .3em 0 0 0 #d4d4d5,0 0 0 1px #d4d4d5;
-}
-
-.tags__bar.sticky {
-	position: fixed;
-	background-color: #06fabd;
-	margin-top: 5%;
-	width: 100%;
-	height: 20%;
-	min-height: 300px;
-	transition: all 0.4s ease;
-}
-
-
-
-
-.filterbutton {
-	font-size: 5rem;
-	padding-left: 1%;
-	height: 16.67%;
-	vertical-align: middle;
-}
-
-.filterbutton--reset {
-	font-size: 2rem;
-	text-decoration: underline;
-	margin-left: 20%;
-}
-
-.image__grid {
-	width:25%;
-	display: inline-block;
-	margin-left: 0.5%;
-	margin-top: 0.5%;
-}
-
-.rowitem { 
-	margin: .5% .6%;
-	width: 32.1%;
-	min-height: 150px;
-	box-sizing: border-box;
-	font-size: 5rem;
-
-} 
-
-.rowitem__author {
-	padding: 0rem 1.2rem;
-}
-
-.header__modules {
-	font-size: 10rem;	
-}
-
-
-
-.rowitem img {
-	width: 100%;
-	padding: 18px;
-	margin: 0px;
-}
-
-.data-container {
-	margin-bottom: 100px;
-}
-
-.meta {
-	word-wrap: break-word;
-	display: block;
-	overflow: inherit;
-	vertical-align: bottom;
-}
-
 /*
 .yellow-bg{
 	background-color: #DDDAD6;
@@ -159,20 +190,15 @@ header.sticky {
 .blue-bg{
 	background-color: #F9F1B5;
 }
-
 .green-bg{
 	background-color: #A6D8DE;
 }
-
 .purple-bg{
 	background-color: #AE9C96;
 }
-
-
 .page--active {
 	display: block;	
 }
-
 .page--hidden {
 	display: inline;
 }*/

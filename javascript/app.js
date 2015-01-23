@@ -18,6 +18,7 @@ function addStickyClass(location) {$(window).on('scroll', function() {
 
 addStickyClass(".tags__bar");
 addStickyClass("header");
+addStickyClass(".filterbutton");
 
 
 
@@ -25,7 +26,7 @@ addStickyClass("header");
 $(window).on("scroll", function() {
 	var scrollHeight = $(document).height();
 	var scrollPosition = $(window).height() + $(window).scrollTop();
-	if ((scrollHeight - scrollPosition) / scrollHeight <= 0.02) {
+	if ((scrollHeight - scrollPosition) / scrollHeight <= 0.015) {
 	$('.jump--up').removeClass("hidden");
   }
   else {
@@ -37,6 +38,12 @@ $(window).on("scroll", function() {
 $('.jump--up').on('click',function(){
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
+ });
+
+
+$('.filterbutton').on('click',function(){
+    $('.filterbutton').css('text-decoration', 'none'); 
+    $(this).css('text-decoration', 'underline'); 
  });
 
 
@@ -163,6 +170,10 @@ $('.jump--up').on('click',function(){
 
 
 			obj.excerpt = curr.excerpt;
+			
+
+
+			
 			var allTags = [];
 			for ( var tags in curr.tags ) {
 				var currentTag = curr.tags[ tags ];
