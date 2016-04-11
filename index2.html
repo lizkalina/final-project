@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title >FEWD-ME</title>
+        
+   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" rel="stylesheet">
+    <link rel='stylesheet' href='styles/semantic.min.css'>
+     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='styles/main2.css'>
+</head>
+<body>
+
+<header class="header__headline"><h1>Sticky Header</h1></header>
+
+
+
+<div class="tags__bar">
+  <div class="filterbutton" data-tag=".comedy">COMEDY</div>
+  <div class="fluid button filterbutton" data-tag=".dogs">DOGS</div>
+  <div class="filterbutton" data-tag=".film">FILM</div>
+  <div class="filterbutton" data-tag=".article">READING</div>
+   <div class="filterbutton" data-tag=".tv">TV</div>
+  <div class="filterbutton" data-tag="*">X</div>
+
+
+<div class = "image__grid">
+  <div class="ui special cards">
+    
+    <div style="width: 44%; margin-bottom: 5px;" class="card">
+      <div class="dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <div class="ui inverted">Jean</div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/Jean.jpg">
+      </div>
+  </div>
+  <div style="width: 44%; margin-bottom: 5px; margin-left: 10px;" class="card">
+      <div class="dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <div class="ui inverted">Liz</div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/profile.jpg">
+   </div>
+    </div>
+     <div style="width: 44%; margin-top:0px;" class="card">
+      <div class="dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <div class="ui inverted">Rob
+            </div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/Rob.jpg">
+      </div>
+  </div>
+  <div style="width: 44%; margin-top:0px; margin-left: 10px;" class="card">
+      <div class="dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <div class="ui inverted">Alex</div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/Alex.jpg">
+      </div>
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+
+
+
+
+<div class="clearfix">
+<div class="column__wrapper glbl--fr js-content">
+
+  
+  <div class="data-container">
+
+   </div>
+   </div>
+
+  
+
+
+</div>
+<footer class="jump--up hidden"><img src="http://news.bbcimg.co.uk/media/images/80437000/jpg/_80437593_a8jinfy6.jpg" alt="Mountain View" style="width:304px;height:228px"></footer>
+
+
+
+
+ 
+
+<!-- IFRAME TEMPLATE -->
+
+<script type="foo/bar" class="iframe--template">
+<div class="rowitem <%= tagClass %>">
+<div style="width:100%" class="ui card">
+  <div class="ui">
+  
+    <% if ( has_image ) { %>
+            <img src="<%= image_src %>">
+          <% } else { %>
+            <span></span>
+          <% } %>
+  </div>
+ 
+
+
+  <div class="content">
+    <a target="_blank" href=<%= given_url %> class="rowitem__header"><%= best_title %></a>
+  </div>
+
+
+   <% if ( has_details ) { %>
+           <div class="ui extra">
+
+
+            <div class="rowitem__excerpt active content">
+    <p><%= excerpt %></p>
+  </div>
+ 
+   </div>
+          <% } else { %>
+         <span style="height:0px;"></span>
+          <% } %>
+ 
+  
+
+<div class="content extra">
+   <a>
+      <i class="users icon"></i>
+      Added by Liz on <%= time_added %>
+    </a><div class="content extra glbl--fr meta"><%= hostname_url %></div>
+</div>
+
+
+
+  </div>
+</div>
+</div>
+  </script>
+
+
+<!-- IFRAME TEMPLATE END -->
+
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+     <script src="javascript/underscore.min.js"></script>
+    <script src="http://isotope.metafizzy.co/isotope.pkgd.min.js"></script>
+    <script src='javascript/semantic.min.js'></script>
+    <script src='javascript/app.js'></script>
+
+
+</body>
+</html>
